@@ -17,6 +17,23 @@
             padding: 20px;
             text-align: center;
             color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            background-color: #ff4d94;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         .content {
             padding: 20px;
@@ -30,24 +47,37 @@
             margin-bottom: 10px;
             border-radius: 8px;
         }
+        @media (min-width: 768px) {
+            .gallery img {
+                width: 50%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Arina Singh</h1>
     </header>
+    <nav>
+        <a href="#music">Music</a>
+        <a href="#art">Art</a>
+        <!-- Add more links as needed -->
+    </nav>
     <div class="content">
-        <div class="section">
+        <div class="section" id="music">
             <h2>Music</h2>
-            <audio controls>
-                <source src="https://open.spotify.com/track/52v5otEqFRbOAa9TzJkIO3?si=d7b6f080cf0a4aab" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
+            <!-- Embed Spotify Player -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/52v5otEqFRbOAa9TzJkIO3?utm_source=generator" 
+            width="100%" height="80" frameborder="0" allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
-        <div class="section">
+        <div class="section" id="art">
             <h2>Art</h2>
             <div class="gallery">
                 <img src="IMG_0067.jpeg" alt="Microphone Head">
+                <img src="IMG_0055.jpeg" alt="Talking Trees">
+                <img src="IMG_0073.jpeg" alt="Galaxy in the sky">
+                <img src="IMG_0074.jpeg" alt="Freedom">
             </div>
         </div>
     </div>
